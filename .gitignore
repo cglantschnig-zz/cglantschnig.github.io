@@ -4,11 +4,6 @@
 ### Git ###
 *.orig
 
-
-### Less ###
-*.css
-
-
 ### Linux ###
 *~
 
