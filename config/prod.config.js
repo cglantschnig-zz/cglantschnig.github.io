@@ -86,7 +86,7 @@ module.exports = {
     extensions: ['', '.json', '.js', '.jsx']
   },
   plugins: [
-    new CleanPlugin(['dist'], {
+    new CleanPlugin(['public'], {
       root: process.cwd()
     }),
 
