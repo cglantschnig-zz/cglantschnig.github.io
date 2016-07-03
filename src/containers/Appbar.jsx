@@ -38,12 +38,10 @@ export default class Appbar extends Component {
                 <aside><img src={logo} /></aside>
               </Link>
             </NavbarBrand>
-            <Navbar.Collapse>
-              <Nav pullRight>
-                <NavItem eventKey={1} styleName="navbar-link-item" href="https://github.com/cglantschnig" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></NavItem>
-                <NavItem eventKey={2} styleName="navbar-link-item" href="http://stackoverflow.com/users/1164646/safari" target="_blank"><i className="fa fa-stack-overflow" aria-hidden="true"></i></NavItem>
-              </Nav>
-            </Navbar.Collapse>
+            <Nav pullRight>
+              <NavItem eventKey={1} styleName="navbar-link-item" href="https://github.com/cglantschnig" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></NavItem>
+              <NavItem eventKey={2} styleName="navbar-link-item" href="http://stackoverflow.com/users/1164646/safari" target="_blank"><i className="fa fa-stack-overflow" aria-hidden="true"></i></NavItem>
+            </Nav>
         </Navbar>
       </div>
     );

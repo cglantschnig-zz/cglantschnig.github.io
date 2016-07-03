@@ -17,7 +17,7 @@ export default function getRoutes(store) {
    */
   return (
     <Route component={ require("./containers/App") }>
-      <Route component={ require("./containers/Test") } path="/" />
+      <Route component={ require("./containers/Portfolio") } path="/" />
     </Route>
   );
 }

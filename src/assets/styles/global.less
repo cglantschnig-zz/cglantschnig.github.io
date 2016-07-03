@@ -7,7 +7,7 @@
 @import "~font-awesome/less/font-awesome.less";
 
 // include the bootstrap setup (all needed bootstrap css definitions and custom overwrites)
-@import "bootstrap-setup.less";
+// @import "bootstrap-setup.less";
 
 // include the react-widgets...
 @import "react-widgets-setup.less";
@@ -34,9 +34,14 @@ html, body {
   border-color: #e7e7e7;
 }
 
-.appbar .container {
+.container {
   width: 100%;
   @media (min-width: 1024px) {
     width: 980px;
   }
+}
+
+.navbar-right {
+  float: right;
+  margin: 0;
 }
