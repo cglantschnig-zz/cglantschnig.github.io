@@ -30,7 +30,7 @@ module.exports = {
     path: assetsPath,
     filename: '[name]-[chunkhash].js',
     chunkFilename: '[name]-[chunkhash].js',
-    publicPath: '.'
+    publicPath: process.env.PUBLIC_ABSOLUTE_URL_PATH_PREFIX
   },
   module: {
     loaders: [{
