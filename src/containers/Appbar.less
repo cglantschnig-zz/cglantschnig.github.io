@@ -16,14 +16,29 @@
     line-height: 40px !important;
     text-align: center;
   }
+  @media (max-width: 480px) {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    a {
+      line-height: 20px !important;
+    }
+  }
 }
 
 .Appbar-brand {
   padding-top: 6px;
+  @media (max-width: 480px) {
+    padding-top: 10px;
+  }
   img { // logo
     height: 40px;
     padding-right: 10px;
     margin: 9px;
+    @media (max-width: 480px) {
+      margin: 0;
+      height: 30px;
+    }
   }
   span { // text
     font-size: 14px;
