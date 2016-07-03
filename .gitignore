@@ -89,3 +89,4 @@ $RECYCLE.BIN/
 
 # Custom Ignores
 webpack-assets.json
+dist/
