@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// Vendor variables
+// -----------------------------------------------------------------------------
+
+@bootstrap-less-path: "~bootstrap/less";
+@react-widgets-less-path: "~react-widgets/lib/less";
+
+@import "@{bootstrap-less-path}/variables.less";
+// Override Bootstrap Theme via bootstrap-variables.less with your own variables (defined here) to design your theme.
+@import "bootstrap-variables.less";
+
+// Override react-widget variables with ours...
+@import "react-widgets-variables.less";
+
+// -----------------------------------------------------------------------------
+// Global variables
+// -----------------------------------------------------------------------------
+
+// proper way to force os system font usage (see https://medium.com/@mwichary/system-shock-6b1dc6d6596f#.joaqrf86x)
+@default-font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Oxygen", "Ubuntu", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+
+@Dashboard-Sidebar-width: 240px;
+@Sidebar-min-height: 420px;

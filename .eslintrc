@@ -1,0 +1,74 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0,
+    "object-curly-spacing": 0, // TODO: disable this for the template project!
+    "react/jsx-no-bind": 0, // disabled
+    "max-len": 0, // disabled (however, you are encouraged to not make long code-lines)
+    "react/jsx-space-before-closing": 0,
+    "react/prefer-stateless-function": 0, // sometimes needed (however, feel encouraged not to do this when unneeded)
+    "no-unneeded-ternary": 0,
+    "react/jsx-closing-bracket-location": 0,
+    "prefer-template": 0,
+    "arrow-body-style": 0,
+    "react/jsx-indent-props": 0,
+    "quote-props": 0,
+    "react/prefer-es6-class": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/jsx-quotes": 0,
+    "react/sort-comp": 0,
+    "import/default": 0,
+    "import/no-duplicates": 0,
+    "import/named": 1,
+    "import/namespace": 1,
+    "import/no-unresolved": 1,
+    "import/no-named-as-default": 1,
+    "react/jsx-boolean-value": 1,
+    "padded-blocks": 0,
+    "comma-dangle": 0,  // not sure why airbnb turned this on. gross!
+    "indent": [1, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-alert": 0,
+    "no-unused-vars": 0,
+    "prefer-const": 1,
+    "id-length": 0,
+    "new-cap": 0,
+    "spaced-comment": 1,
+    "no-multiple-empty-lines": 1,
+    "semi": 1,
+    "space-before-function-paren": 0,
+    "quotes": [1, "double"], // Only double quotes for consistency
+    "eol-last": 0, // No New-line at end of file is OK
+    "babel/new-cap": 0,
+    "babel/object-curly-spacing": 0,
+    "dot-notation": 1
+  },
+  "plugins": [
+    "react", "import"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      extensions: [".js", ".jsx"],
+      moduleDirectory: ["node_modules", "src"]
+    },
+    "import/ignore": [node_modules, \.(scss|less|css)$] // can't parse unprocessed CSS modules, either
+  },
+  "globals": {
+    "__DEVELOPMENT__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DISABLE_SSR__": true,
+    "__API_BASE_URL__": true,
+    "socket": true,
+    "webpackIsomorphicTools": true
+  }
+}

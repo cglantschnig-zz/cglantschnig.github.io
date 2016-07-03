@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// IMPORT 3rd party css libs
+// -----------------------------------------------------------------------------
+
+@import "variables.less";
+
+@import "~font-awesome/less/font-awesome.less";
+
+// include the bootstrap setup (all needed bootstrap css definitions and custom overwrites)
+@import "bootstrap-setup.less";
+
+// include the react-widgets...
+@import "react-widgets-setup.less";
+
+// -----------------------------------------------------------------------------
+// Other global styles
+// -----------------------------------------------------------------------------
+
+html, body {
+  font-family: @default-font-family;
+  min-width: 980px;
+}
+
+// needed for contained modals to work.
+// https://react-bootstrap.github.io/components.html#modals-contained
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
