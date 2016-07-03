@@ -19,7 +19,6 @@ var loadBabelConfiguration = require("./loadBabelConfiguration");
 var babelLoaderQuery = loadBabelConfiguration("production", {});
 
 module.exports = {
-  devtool: 'source-map',
   context: path.resolve(__dirname, '..'),
   entry: {
     'main': [
@@ -31,7 +30,7 @@ module.exports = {
     path: assetsPath,
     filename: '[name]-[chunkhash].js',
     chunkFilename: '[name]-[chunkhash].js',
-    publicPath: process.env.PUBLIC_ABSOLUTE_URL_PATH_PREFIX // must be defined in sourced env.
+    publicPath: '.'
   },
   module: {
     loaders: [{
@@ -43,19 +42,19 @@ module.exports = {
       loader: 'json-loader'
     }, {
       test: /\.less$/,
-      loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=2&sourceMap!autoprefixer?browsers=last 2 version!less?outputStyle=expanded&sourceMap=true&sourceMapContents=true'),
+      loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=2!autoprefixer?browsers=last 2 version!less?outputStyle=expanded'),
       exclude: /src\/assets/
     }, {
       test: /\.less$/,
-      loader: ExtractTextPlugin.extract('style', 'css?importLoaders=2&sourceMap!autoprefixer?browsers=last 2 version!less?outputStyle=expanded&sourceMap=true&sourceMapContents=true'),
+      loader: ExtractTextPlugin.extract('style', 'css?importLoaders=2!autoprefixer?browsers=last 2 version!less?outputStyle=expanded'),
       include: /src\/assets/
     }, {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=2&sourceMap!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap=true&sourceMapContents=true'),
+      loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=2!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'),
       exclude: /src\/assets/
     }, {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style', 'css?importLoaders=2&sourceMap!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap=true&sourceMapContents=true'),
+      loader: ExtractTextPlugin.extract('style', 'css?importLoaders=2!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'),
       include: /src\/assets/
     }, {
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -126,7 +125,6 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
       output: {
         comments: false
       },
