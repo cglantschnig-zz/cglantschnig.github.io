@@ -6,7 +6,7 @@ var CleanPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var strip = require('strip-loader');
 
-var relativeAssetsPath = '../dist';
+var relativeAssetsPath = '../public';
 var assetsPath = path.join(__dirname, relativeAssetsPath);
 
 var HtmlWebpackPlugin = require("html-webpack-plugin");
