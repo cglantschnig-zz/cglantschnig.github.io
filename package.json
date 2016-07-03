@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git subtree push --prefix dist origin master",
+    "deploy": "git subtree push --prefix public origin master",
     "build-dev": "source config/env/env-development.sh && node node_modules/webpack/bin/webpack.js --progress --verbose --colors --display-error-details --config config/dev.config.js",
     "build-production": "source config/env/env-production.sh && node node_modules/webpack/bin/webpack.js --progress --verbose --colors --display-error-details --config config/prod.config.js",
     "watch": "source config/env/env-development.sh && UV_THREADPOOL_SIZE=100 NODE_PATH=./src node config/webpack-dev-server.js"
