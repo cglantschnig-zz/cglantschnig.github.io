@@ -17,7 +17,7 @@ export default class Portfolio extends Component {
     return (
       <Grid styleName="content-area">
         <Row>
-          <Col xs={12} sm={8} smOffset={2} md={4}>
+          <Col xs={12} sm={6} md={4}>
             <Image src={mePicture} thumbnail />
           </Col>
         </Row>
